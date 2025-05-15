@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild> <!-- Set to true to pack on every build -->
+    <PackageId>EngBlock.WebFragments.Core</PackageId> <!-- Or YourCompany.WebFragments.AspNetCore.Mvc -->
+    <Version>1.0.0</Version>
+    <Authors>Nathan Beddoe</Authors>
+    <Company>EngBlock</Company>
+    <Description>Core library for web fragment processing.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.12.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.5" />
+  </ItemGroup>
+
+</Project>

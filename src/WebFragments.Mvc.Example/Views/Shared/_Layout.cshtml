@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebFragments.Mvc.Example</title>
+    <script type="importmap"></script>
+    <web-fragment-styles />
+</head>
+<body>
+            @RenderBody()
+
+    @await RenderSectionAsync("Scripts", required: false)
+    <web-fragment-scripts />
+</body>
+</html>
