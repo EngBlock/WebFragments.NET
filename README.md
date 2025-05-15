@@ -1,6 +1,6 @@
 # WebFragments
 
-**WebFragments** is a .NET 8 solution designed to download HTML content from a URL (a "fragment"), extract its essential assets (CSS, JavaScript) and body content, and then seamlessly integrate this fragment into a host application. It's particularly well-suited for ASP.NET Core MVC applications using Tag Helpers for server-side rendering (SSR) and also provides core logic for static HTML file processing.
+**WebFragments** is a .NET solution designed to download HTML content from a URL (a "fragment"), extract its essential assets (CSS, JavaScript) and body content, and then seamlessly integrate this fragment into a host application. It's particularly well-suited for ASP.NET Core MVC applications using Tag Helpers for server-side rendering (SSR) and also provides core logic for static HTML file processing.
 
 This solution helps in building modular web applications where parts of a page (fragments) can be maintained and deployed independently, then composed together on the server.
 
@@ -25,13 +25,13 @@ This solution helps in building modular web applications where parts of a page (
 The solution is organized into the following projects:
 
 1.  **`WebFragments.Core`**:
-    *   A .NET 8 class library containing the core logic.
+    *   A .NET class library containing the core logic.
     *   `IFragmentExtractor` / `FragmentExtractor`: Services responsible for fetching a fragment URL, parsing its HTML (using HtmlAgilityPack), and extracting `FragmentData` (body content, CSS links, JS script URLs).
     *   `FragmentData`: A model class to hold the extracted information.
     *   `StaticHtmlFragmentProcessor`: A service to take a target HTML (file or string) and inject one or more fragments into it by replacing specified elements and adding assets.
 
 2.  **`WebFragments.AspNetCore.Mvc`**:
-    *   A .NET 8 class library providing ASP.NET Core MVC integration.
+    *   A .NET class library providing ASP.NET Core MVC integration.
     *   `WebFragmentTagHelper` (`<web-fragment>`): Fetches a fragment and renders its body content. It also registers the fragment's assets with an asset collector.
     *   `FragmentStylesTagHelper` (`<web-fragment-styles>`): Renders all collected unique CSS `<link>` tags, typically placed in the `<head>`.
     *   `FragmentScriptsTagHelper` (`<web-fragment-scripts>`): Renders all collected unique JS `<script>` tags, typically placed at the end of the `<body>`.
@@ -44,7 +44,7 @@ The solution is organized into the following projects:
 
 ## Prerequisites
 
-*   .NET 8 SDK
+*   .NET SDK
 *   For running the `WebFragments.Mvc.Example` project and testing fragment URLs that point to `localhost`: A simple local HTTP server to serve the example fragment files from `wwwroot` if you are testing URLs like `http://localhost:xxxx/fragments/fragment1.html`. The example project itself will serve these files if you use relative paths or construct URLs pointing to its own `wwwroot`.
 
 ## Installation & Setup
