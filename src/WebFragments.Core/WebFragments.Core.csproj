@@ -10,6 +10,8 @@
     <Authors>Nathan Beddoe</Authors>
     <Company>EngBlock</Company>
     <Description>Core library for web fragment processing.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
