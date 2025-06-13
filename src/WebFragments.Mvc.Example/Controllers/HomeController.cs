@@ -28,6 +28,7 @@ public class HomeController : Controller
         // Construct full URLs for fragments served by this app
         ViewBag.Fragment1Url = $"{Request.Scheme}://{Request.Host}/fragments/fragment1.html";
         ViewBag.Fragment2Url = $"https://car-confessions.pages.dev";
+        ViewBag.Fragment3Url = $"https://react-fragment.nbedd2.workers.dev";
         return View();
     }
 
